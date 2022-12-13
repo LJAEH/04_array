@@ -10,9 +10,19 @@ public class ArrayExample1 {
 	
 	/*
 	 * 배열(Array)
-	 * - 같은 자료형의 변수를 하나의 묶음으로 다루는 것.(자료구조)
+	 * - **같은 자료형**의 변수를 하나의 묶음으로 다루는 것.(자료구조) 중요 배열의 정의로 시험나옴
 	 * - 묶여진 변수들은 하나의 배열명으로 불려지고 구분은 index를 이용함
 	 * (index는 0부터 시작하는 정수)
+	 * 
+	 * **특징**
+	 * 한가지 자료형 저장
+	 * 여러값 저장
+	 * 크기지정후엔 수정 불가
+	 * 
+	 * 
+	 * Heap 영역은 배열 할당부분 ****** 중요
+	 * 할당된 공간은 비어있을수 없고
+	 * 최초 할당시 JVM 에 
 	 * 
 	 */
 	
@@ -302,6 +312,55 @@ public class ArrayExample1 {
 			System.out.println("업서여");
 		}
 		
+		
+	}
+	
+	public void ex9() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 입력 :");
+		String str = sc.nextLine();
+		
+		
+		// 1. 문자열을 입력 받아 한 글자씩 잘라내어 char 배열에 순서대로 저장
+		char[] arr = new char[str.length()];
+		
+		for(int a = 0; a < arr.length; a++) {
+			arr[a] = str.charAt(a);
+		}
+
+		// 중간 확인 과정
+		// System.out.println( Arrays.toString(arr) );
+		
+		/*for (int i = 0; i < str.length(); i++) {
+			if (arr[i] != alp) {
+				System.out.println("맞는 문자가 없음");
+			}
+		}
+		*/ // 문자 뽑기 틀림
+		
+		// 2. 문자 하나를 입력 받아 일치하는 문자가 char 배열에 몇개 존재하는지 확인
+		
+		System.out.print("문자 입력 : ");
+		char alp = sc.next().charAt(0);
+		                     // String.charAt(0) : 문자열 제일 앞 문자
+	
+		int count = 0;
+		
+		for( int i = 0; i < str.length(); i++) {
+			if (str.charAt(i) == alp) {
+				count++;
+			} 
+		}
+		
+		if ( count > 0 ) {
+			System.out.println("입력한 숫자 수는 : " + count);
+		} 
+		
+		// 3. 일치하는 문자가 없을 경우 "존재하지 않습니다." 출력
+		if ( count == 0 ) {
+			System.out.println("일치하는 문자없음");
+		}
 		
 	}
 	
