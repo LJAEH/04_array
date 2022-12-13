@@ -327,7 +327,7 @@ public class ArrayExample1 {
 		
 		for(int a = 0; a < arr.length; a++) {
 			arr[a] = str.charAt(a);
-		}
+		}               // 문자열에서 a번째 문자를 뽑아냄
 
 		// 중간 확인 과정
 		// System.out.println( Arrays.toString(arr) );
