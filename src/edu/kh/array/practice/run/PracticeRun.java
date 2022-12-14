@@ -8,7 +8,7 @@ public class PracticeRun {
 		
 		PracticeService arrex = new PracticeService();
 		
-		arrex.practice13();
+		arrex.practice1();
 		
 		
 	}
